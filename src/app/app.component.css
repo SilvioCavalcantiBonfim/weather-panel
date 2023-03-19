@@ -1,0 +1,12 @@
+.back{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url('/assets/Background-geral.png');
+    background-size: 110vw 110vh;
+    background-position: -5vw -5vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

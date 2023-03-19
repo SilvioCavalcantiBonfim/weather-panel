@@ -1,0 +1,67 @@
+.container{
+    width: 480px;
+    height: 480px;
+    background: url('../../assets/background.png');
+    background-size: 100% 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 12px;
+    position: relative;
+}
+.cloud{
+    position: absolute;
+    top: -56px;
+    left: -56px;
+}
+.location{
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+}
+.location span{
+    color: #C2BFF4;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    margin-left: 4px;
+}
+.statistic_container{
+    width: 456px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 12px;
+}
+.temperature{
+    width: 103px;
+    position: absolute;
+    top: 112px;
+    left: 188px;
+}
+.temperature_number{
+    font-size: 88px;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+.temperature_unit{
+    margin-top: 17px;
+    font-size: 24px;
+    color: #DAD8F7;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.temperature_sub{
+    margin-top: 4px;
+    margin-left: 17.5px;
+    font-size: 20px;
+    color: #DAD8F7;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.temperature_sub span{
+    color: #FFF;
+}

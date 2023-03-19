@@ -1,0 +1,37 @@
+.container{
+    width: 146.66px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgba(	101, 96, 200, 0.6);
+    box-sizing: border-box;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+}
+.textContainer{
+    width: 59px;
+    height: 36px;
+    margin-left: 12px;
+}
+.title{
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #E7E6FB;
+    line-height: 14px;
+}
+.number{
+    font-size: 18px;
+    color: #E7E6FB;
+    font-family: 'Lato', sans-serif;
+    font-weight: blod;
+    line-height: 22px;
+}
+.unit{
+    margin-left: 4px;
+    font-size: 14px;
+    color: #DAD8F7;
+    font-family: 'Lato', sans-serif;
+    font-weight: blod;
+    line-height: 22px;
+}
