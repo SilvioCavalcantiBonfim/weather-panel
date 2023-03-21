@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GeolocationService } from '../service/geolocation.service';
 
 @Component({
   selector: 'app-temperature-now',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./temperature-now.component.css']
 })
 export class TemperatureNowComponent {
+  constructor(public geolocation: GeolocationService){}
 
+  get isLoading(): boolean{
+    return this.geolocation.position.latitude === null || this.geolocation.position.longitude === null;
+  }
 }
