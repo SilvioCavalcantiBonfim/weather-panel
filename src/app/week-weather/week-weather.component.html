@@ -1,7 +1,7 @@
 <div class="container">
-    <app-day></app-day>
-    <app-day [type]="1"></app-day>
-    <app-day [type]="2"></app-day>
-    <app-day [type]="3"></app-day>
-    <app-day [type]="4"></app-day>
+    <app-day [type]="geolocation.IconPreciptation[1]" [title]="'Amanhã'" [variant]="[geolocation.Temperatures.min[1],geolocation.Temperatures.max[1]]"></app-day>
+    <app-day [type]="geolocation.IconPreciptation[2]" [title]="nameDay.at((day+2)%(nameDay.length))" [variant]="[geolocation.Temperatures.min[2],geolocation.Temperatures.max[2]]"></app-day>
+    <app-day [type]="geolocation.IconPreciptation[3]" [title]="nameDay.at((day+3)%(nameDay.length))" [variant]="[geolocation.Temperatures.min[3],geolocation.Temperatures.max[3]]"></app-day>
+    <app-day [type]="geolocation.IconPreciptation[4]" [title]="nameDay.at((day+4)%(nameDay.length))" [variant]="[geolocation.Temperatures.min[4],geolocation.Temperatures.max[4]]"></app-day>
+    <app-day [type]="geolocation.IconPreciptation[5]" [title]="nameDay.at((day+5)%(nameDay.length))" [variant]="[geolocation.Temperatures.min[5],geolocation.Temperatures.max[5]]"></app-day>
 </div>

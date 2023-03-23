@@ -8,7 +8,10 @@ import { GeolocationService } from '../service/geolocation.service';
 })
 export class TemperatureNowComponent {
   constructor(public geolocation: GeolocationService){}
-
+  
+  get hours(): number{
+    return (new Date()).getHours();
+  }
   get isLoading(): boolean{
     return this.geolocation.position.latitude === null || this.geolocation.position.longitude === null;
   }

@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class DayComponent {
   @Input() type: number = 0;
+  @Input() title: string | undefined = 'Amanhã';
+  @Input() variant: number[] | null = null;
 }

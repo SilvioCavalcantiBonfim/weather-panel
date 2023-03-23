@@ -4,9 +4,9 @@ export interface Coordinate{
 }
 
 export interface Temperature{
-    current: number[] | null,
-    min: number | null,
-    max: number | null
+    current: number[],
+    min: number[],
+    max: number[]
 }
 
 export interface SunTime{

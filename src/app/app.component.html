@@ -1,5 +1,14 @@
 <div class="back">
-  <div class="container">
+  <div class="container_loading" *ngIf="geolocation.inLoading">
+    <div class="loading">
+      <app-loading/>
+      <div class="loading_text">
+        <span *ngIf="geolocation.position.latitude === null">Carregando localização...</span>
+        <span *ngIf="geolocation.position.latitude !== null && geolocation.Suntime.sunrise === null">Carregando dados climaticos...</span>
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngIf="!geolocation.inLoading">
     <app-temperature-now class="div1"></app-temperature-now>
     <app-air-quality class="div2"></app-air-quality>
     <app-sum-time  class="div3"></app-sum-time>

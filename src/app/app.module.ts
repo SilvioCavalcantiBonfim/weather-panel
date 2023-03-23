@@ -11,7 +11,7 @@ import { SumTimeComponent } from './sum-time/sum-time.component';
 import { WeekWeatherComponent } from './week-weather/week-weather.component';
 import { DayComponent } from './week-weather/day/day.component';
 import { ClimateIconComponent } from './climate-icon/climate-icon.component';
-import { SkeletonComponent } from './skeleton/skeleton.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { SkeletonComponent } from './skeleton/skeleton.component';
     WeekWeatherComponent,
     DayComponent,
     ClimateIconComponent,
-    SkeletonComponent
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

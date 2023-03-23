@@ -15,6 +15,7 @@
             <line opacity="0.4" x1="14" y1="121.5" x2="230" y2="121.5" stroke="#F6C833" />
             <line x1="228" y1="126" x2="228" y2="118" stroke="#E5BB46" stroke-width="2" />
             <line x1="16" y1="126" x2="16" y2="118" stroke="#E5BB46" stroke-width="2" />
+            <circle cy="50" [attr.cx]="microSunPosition[0]" [attr.cy]="microSunPosition[1]" r="6" fill="#F6C833" />
         </svg>
         <svg class="percentage_day" [attr.width]="percentageDay*245" [attr.viewBox]="'0 0 '+percentageDay*245+' 148'"
             height="148" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,10 +31,12 @@
         </svg>
     </div>
     <div class="current-time">
-        {{currentTime | date: 'HH:mm' }}
+        <span>{{currentTime | date: 'HH:mm' }}</span>
     </div>
-    <app-skeleton *ngIf="geolocation.Suntime.sunrise === null" class="start-time"></app-skeleton>
-    <div class="start-time" *ngIf="geolocation.Suntime.sunrise !== null">{{geolocation.Suntime.sunrise| date: 'HH:mm'}}</div>
-    <app-skeleton *ngIf="geolocation.Suntime.sunset === null" class="end-time"></app-skeleton>
-    <div class="end-time" *ngIf="geolocation.Suntime.sunset !== null">{{geolocation.Suntime.sunset | date: 'HH:mm'}}</div>
+    <div class="start-time">
+        <span>{{geolocation.Suntime.sunrise| date: 'HH:mm'}}</span>
+    </div>
+    <div class="end-time">
+        <span>{{geolocation.Suntime.sunset | date: 'HH:mm'}}</span>
+    </div>
 </div>
