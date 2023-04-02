@@ -1,7 +1,0 @@
-<div class="container" *ngIf="variant !== null">
-    <div class="title">{{title}}</div>
-    <app-climate-icon [type]="type"></app-climate-icon>
-    <div class="temperature">
-        <span class="min">{{variant[0] | number: '2.0-0'}}° </span><span class="max">{{variant[1] | number: '2.0-0'}}°</span>
-    </div>
-</div>
