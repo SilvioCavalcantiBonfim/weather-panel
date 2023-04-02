@@ -14,6 +14,7 @@ export class GeolocationService{
   private windSpeed: number = 0;
   private humidity: number[] = [];
   private types: number[] = [];
+  private airquality: any = null;
 
   constructor(private http: HttpClient) {
     this.update();
@@ -42,10 +43,19 @@ export class GeolocationService{
             this.windSpeed = r.daily.windspeed_10m_max[0];
             this.humidity = r.hourly.relativehumidity_2m;
           }
+        });
+        this.http.get<any>(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${this.coordinates.latitude}&longitude=${this.coordinates.longitude}&hourly=pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone`).subscribe({
+          next: (r: any) => {
+            this.airquality = r.hourly;
+          }
         })
       });
   }
 
+  
+  public get airQuality() : any {
+    return this.airquality;
+  }
   
   public get IconPreciptation(): number[]{
     return this.types;
@@ -72,7 +82,7 @@ export class GeolocationService{
   }
 
   get inLoading(): boolean{
-    return this.coordinates.latitude === null || this.coordinates.longitude === null || this.temperature.max.length === 0;
+    return this.coordinates.latitude === null || this.coordinates.longitude === null || this.temperature.max.length === 0 || this.airQuality === null;
   }
 
   get position(): Coordinate{
