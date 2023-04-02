@@ -17,13 +17,33 @@ export class AirQualityComponent {
     [10000, 13000, 15000, 17000]
   ];
 
-  public color: any = [
+  public color: string[] = [
     "#87EBCD",
     "#e1eb87",
     "#ebc887",
     "#eb8787",
     "#eb87eb"
-  ]
+  ];
+
+  public text: string[] = [
+    "Boa",
+    "Moderada",
+    "Ruim",
+    "Muito Ruim",
+    "Péssima"
+  ];
+  
+  public get available() : number {
+    const data: number[] = this.limits.map((e: number[],i: number) => {
+      return this.compare(this.values[i], e);
+    });
+    var moda: number[] = [0,0,0,0,0];
+    data.forEach((e: number) => {
+      moda[e] += 1;
+    });
+    return moda.indexOf(Math.max(...moda));
+  }
+  
 
   public compare (v: number, limit: number[]): number{
     return Number(v > limit[0])+Number(v > limit[1])+Number(v > limit[2])+Number(v > limit[3]);

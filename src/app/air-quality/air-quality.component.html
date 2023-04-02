@@ -5,11 +5,8 @@
         </svg>
         <span>Qualidade do ar</span>
     </div>
-    <div class="status">
-        Boa
-    </div>
-    <div class="value">
-        21
+    <div class="status" [style]="'color:'+color[available]">
+        {{text[available]}}
     </div>
     <div class="infos">
         <div class="number" *ngFor="let m of molecules, index as i">
