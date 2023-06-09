@@ -1,5 +1,15 @@
 {
     "project": "Weather Panel",
-    "frameworks": ["angular"],
-    "description": "Painel climatico criado em Angular."
+    "technologies": [
+        {
+            "name": "Angular",
+            "iconUrl": "https://cdn.simpleicons.org/Angular"
+        }
+    ],
+    "description": "Weather Panel  é um projeto inovador e moderno que visa fornecer uma visualização interativa e detalhada de dados climáticos em tempo real. Desenvolvido usando o framework Angular, esse painel oferece aos usuários uma experiência envolvente e informativa ao explorar as condições climáticas em várias regiões.",
+    "deploy": [{
+      "url":"https://silviocavalcantibonfim.github.io/weather-panel/",
+      "urlIcon":"https://cdn.simpleicons.org/githubpages"
+    }],
+   "thumbnailUrl": "https://raw.githubusercontent.com/SilvioCavalcantiBonfim/weather-panel/0.1.0/thumb.png"
 }
